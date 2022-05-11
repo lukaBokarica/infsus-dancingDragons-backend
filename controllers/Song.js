@@ -16,8 +16,8 @@ export const createSong = async (req, res) => {
         if (docs.length) {
             console.log('Song exists already!');
         } else {
-            const {title, artistsIds} = req.body;
-            const newSong = new Song({id, title, artistsIds})
+            const {title, artistIds} = req.body;
+            const newSong = new Song({id, title, artistIds})
             try {
                 await newSong.save();
                 res.status(201).json(newSong);

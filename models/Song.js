@@ -5,7 +5,7 @@ const songSchema = mongoose.Schema({
     title: String,
     albumId: Number,
     //artistsIds: Array,
-    artistsIds: {
+    artistIds: {
         type: [Number],
         default: []
     }
