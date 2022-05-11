@@ -5,11 +5,11 @@ const albumSchema = mongoose.Schema({
     title: String,
     year: String,
     coverImage: String,
-    //songIds: Array,
-    songIds: {
-        type: [Number],
-        default: []
-    }
+    songIds: Array,
+    // songIds: {
+    //     type: [Number],
+    //     default: []
+    // }
 });
 
 const Album = mongoose.model('albums', albumSchema);
