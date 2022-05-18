@@ -59,4 +59,9 @@ export const addSongsToAlbum = async (req, res) => {
     res.status(200).json(album);
 }
 
+export const getAllAlbums = async (req, res) => {
+    let albums = await Album.find();
+    res.status(200).json(albums);
+}
+
 export default router;
