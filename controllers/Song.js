@@ -2,7 +2,6 @@ import express from 'express';
 import mongoose from "mongoose";
 import request from "request";
 import Song from "../models/Song.js";
-import Album from "../models/Album.js";
 
 const router = express.Router();
 
@@ -26,7 +25,11 @@ export const createSong = async (req, res) => {
             }
         }
     });
+}
 
+export const getAllSongs = async (req, res) => {
+    let songs = await Song.find();
+    res.status(200).json(songs);
 }
 
 export default router;
