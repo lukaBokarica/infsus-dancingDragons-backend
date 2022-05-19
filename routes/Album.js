@@ -10,7 +10,7 @@ import {
 
 const router=express.Router();
 
-router.get('/:id', getAlbumById);
+router.get('/:id/get', getAlbumById);
 router.get('/all', getAllAlbums);
 router.post('/add', createAlbum);
 router.get('/:id/songs', getSongsFromAlbum);
