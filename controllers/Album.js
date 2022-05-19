@@ -64,4 +64,10 @@ export const getAllAlbums = async (req, res) => {
     res.status(200).json(albums);
 }
 
+export const getAlbumById = async (req, res) => {
+    const {id} = req.params;
+    const album = await Album.findOne({id: id});
+    res.status(200).json(album);
+}
+
 export default router;

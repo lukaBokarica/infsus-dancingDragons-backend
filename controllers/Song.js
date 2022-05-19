@@ -29,6 +29,7 @@ export const createSong = async (req, res) => {
 
 export const getAllSongs = async (req, res) => {
     let songs = await Song.find();
+
     res.status(200).json(songs);
 }
 
