@@ -33,4 +33,19 @@ export const getAllSongs = async (req, res) => {
     res.status(200).json(songs);
 }
 
+export const deleteSong = async (req, res) => {
+    const {id} = req.params;
+
+    Song.find({
+        id: id
+    }, async function (err, docs) {
+        if (docs.length) {
+            await Song.deleteOne({id: id});
+            res.json({message: "Song deleted successfully."});
+        } else {
+            res.status(400).json({message: "Song doesn't exist!"});
+        }
+    });
+}
+
 export default router;
