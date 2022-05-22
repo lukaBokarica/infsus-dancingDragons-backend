@@ -41,7 +41,7 @@ export const deleteSong = async (req, res) => {
     }, async function (err, docs) {
         if (docs.length) {
             await Song.deleteOne({id: id});
-            res.json({message: "Song deleted successfully."});
+            res.json("Song deleted successfully.");
         } else {
             res.status(400).json({message: "Song doesn't exist!"});
         }
@@ -54,7 +54,7 @@ export const updateSong = async (req, res) => {
     const updatedSong = new Song({id, title, albumId})
 
     await Song.findOneAndUpdate({id: id}, updatedSong, {new: true})
-    res.status(200).json({message: "Song deleted successfully."});
+    res.status(200).json("Song updated successfully.");
 }
 
 export default router;
