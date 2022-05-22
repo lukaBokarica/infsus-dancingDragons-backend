@@ -53,7 +53,7 @@ export const updateSong = async (req, res) => {
     const {title, albumId} = req.body;
     const updatedSong = new Song({id, title, albumId});
 
-    await Song.updateOne({id: id}, updatedSong, {new: true});
+    await Song.updateOne({id: id}, {title: title, albumId: albumId}, {new: true});
     res.status(200).json("Song updated successfully.");
 }
 
