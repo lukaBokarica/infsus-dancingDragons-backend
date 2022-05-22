@@ -51,9 +51,9 @@ export const deleteSong = async (req, res) => {
 export const updateSong = async (req, res) => {
     const {id} = req.params;
     const {title, albumId} = req.body;
-    const updatedSong = new Song({id, title, albumId})
+    const updatedSong = new Song({id, title, albumId});
 
-    await Song.findOneAndUpdate({id: id}, updatedSong, {new: true})
+    await Song.updateOne({id: id}, updatedSong, {new: true});
     res.status(200).json("Song updated successfully.");
 }
 
