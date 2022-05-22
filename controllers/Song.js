@@ -54,10 +54,12 @@ export const deleteSong = async (req, res) => {
 
 export const updateSong = async (req, res) => {
     const {id} = req.params;
-    const {title, albumId} = req.body;
+    const {title, albumId, oldAlbumId} = req.body;
     const updatedSong = new Song({id, title, albumId});
 
+    await Album.findOneAndUpdate({id: oldAlbumId}, {$pull: {songIds: id}});
     await Song.updateOne({id: id}, {title: title, albumId: albumId}, {new: true});
+    await Album.findOneAndUpdate({id: albumId}, {$addToSet: {songIds: [id]}}, {new: true});
     res.status(200).json("Song updated successfully.");
 }
 
