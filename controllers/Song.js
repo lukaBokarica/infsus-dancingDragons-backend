@@ -2,7 +2,6 @@ import express from 'express';
 import mongoose from "mongoose";
 import request from "request";
 import Song from "../models/Song.js";
-import Genre from "../models/Genre.js";
 import Album from "../models/Album.js";
 
 const router = express.Router();
@@ -59,9 +58,9 @@ export const updateSong = async (req, res) => {
     if(albumId == oldAlbumId) {
         await Song.updateOne({id: id}, {title: title, albumId: albumId}, {new: true});
     } else {
-        await Album.findOneAndUpdate({id: oldAlbumId}, {$pull: {songIds: id}});
+        await Album.findOneAndUpdate({id: oldAlbumId}, {$pull: {songIds: parseInt(id)}});
         await Song.updateOne({id: id}, {title: title, albumId: albumId}, {new: true});
-        await Album.findOneAndUpdate({id: albumId}, {$addToSet: {songIds: [id]}}, {new: true});
+        await Album.findOneAndUpdate({id: albumId}, {$addToSet: {songIds: parseInt(id)}}, {new: true});
     }
     res.status(200).json("Song updated successfully.");
 }
