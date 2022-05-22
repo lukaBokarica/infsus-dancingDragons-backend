@@ -75,6 +75,56 @@ db.albums.insert({ "id": 12, "year": "2012", "coverImage": "https://thesoniccoll
 db.albums.insert({ "id": 13, "year": "2017", "coverImage": "https://upload.wikimedia.org/wikipedia/en/5/51/KendrickLamar-Damn.png", "title": "DAMN.", "songIds": [46, 47, 48, 49] });
 
 //COLLECTION: songs
+db.songs.insert({ "id": 1, "albumId": 1, "title": "Carolina" });
+db.songs.insert({ "id": 2, "albumId": 1,  "title": "Sign of the Times" });
+db.songs.insert({ "id": 3, "albumId": 1,  "title": "Only Angel" });
+db.songs.insert({ "id": 4, "albumId": 1, "title": "Kiwi" });
+db.songs.insert({ "id": 5, "albumId": 2, "title": "Golden" });
+db.songs.insert({ "id": 6, "albumId": 2,  "title": "Watermelon Sugar" });
+db.songs.insert({ "id": 7, "albumId": 2, "title": "Adore You" });
+db.songs.insert({ "id": 8, "albumId": 2, "title": "Cherry" });
+db.songs.insert({ "id": 9, "albumId": 3, "title": "Come to Life" });
+db.songs.insert({ "id": 10, "albumId": 3,  "title": "Lord I Need You" });
+db.songs.insert({ "id": 11, "albumId": 3,  "title": "Hurricane" });
+db.songs.insert({ "id": 12, "albumId": 3,  "title": "Heaven and Hell"});
+db.songs.insert({ "id": 13, "albumId": 4,  "title": "Space Oddity" });
+db.songs.insert({ "id": 14, "albumId": 4,"title": "Letter to Hermione" });
+db.songs.insert({ "id": 15, "albumId": 4,  "title": "Janine" });
+db.songs.insert({ "id": 16, "albumId": 4,  "title": "An Occasional Dream" });
+db.songs.insert({ "id": 17, "albumId": 5,  "title": "California Gurls" });
+db.songs.insert({ "id": 18, "albumId": 5, "title": "Teenage Dream" });
+db.songs.insert({ "id": 19, "albumId": 5, "title": "Not Like the Movies" });
+db.songs.insert({ "id": 20, "albumId": 6,  "title": "Roars" });
+db.songs.insert({ "id": 21, "albumId": 6, "title": "This Moment" });
+db.songs.insert({ "id": 22, "albumId": 6,  "title": "Spiritual" });
+db.songs.insert({ "id": 23, "albumId": 7,  "title": "Good Morning" });
+db.songs.insert({ "id": 24, "albumId": 7,  "title": "Stronger" });
+db.songs.insert({ "id": 25, "albumId": 7,  "title": "Champion" });
+db.songs.insert({ "id": 26, "albumId": 8,  "title": "Lost" });
+db.songs.insert({ "id": 27, "albumId": 8,  "title": "White" });
+db.songs.insert({ "id": 28, "albumId": 8, "title": "Pink Matter" });
+db.songs.insert({ "id": 29, "albumId": 8,  "title": "End" });
+db.songs.insert({ "id": 30, "albumId": 9,  "title": "Pink+White" });
+db.songs.insert({ "id": 31, "albumId": 9,  "title": "Ivy" });
+db.songs.insert({ "id": 32, "albumId": 9,  "title": "Nights" });
+db.songs.insert({ "id": 33, "albumId": 9,  "title": "White Ferrari" });
+db.songs.insert({ "id": 34, "albumId": 10,  "title": "Me and Your Momma" });
+db.songs.insert({ "id": 35, "albumId": 10,  "title": "Riot" });
+db.songs.insert({ "id": 36, "albumId": 10,  "title": "Redbone" });
+db.songs.insert({ "id": 37, "albumId": 10, "title": "Have Some Love" });
+db.songs.insert({ "id": 38, "albumId": 11,  "title": "Crawl" });
+db.songs.insert({ "id": 39, "albumId": 11,  "title": "Dial Up" });
+db.songs.insert({ "id": 40, "albumId": 11, "title": "Shadows" });
+db.songs.insert({ "id": 41, "albumId": 11, "title": "The Worst Guys" });
+db.songs.insert({ "id": 42, "albumId": 12,  "title": "Good Kid" });
+db.songs.insert({ "id": 43, "albumId": 12,  "title": "Backseat Freestyle" });
+db.songs.insert({ "id": 44, "albumId": 12,  "title": "Money Trees" });
+db.songs.insert({ "id": 45, "albumId": 12,  "title": "m.A.A.d city" });
+db.songs.insert({ "id": 46, "albumId": 13,  "title": "DNA." });
+db.songs.insert({ "id": 47, "albumId": 13,  "title": "ELEMENT." });
+db.songs.insert({ "id": 48, "albumId": 13,  "title": "HUMBLE." });
+db.songs.insert({ "id": 49, "albumId": 13,  "title": "DUCKWORTH." });
+/*
 db.songs.insert({ "id": 1, "albumId": 1, "artistIds": [5], "title": "Carolina" });
 db.songs.insert({ "id": 2, "albumId": 1, "artistIds": [5], "title": "Sign of the Times" });
 db.songs.insert({ "id": 3, "albumId": 1, "artistIds": [5], "title": "Only Angel" });
@@ -124,7 +174,7 @@ db.songs.insert({ "id": 46, "albumId": 13, "artistIds": [13], "title": "DNA." })
 db.songs.insert({ "id": 47, "albumId": 13, "artistIds": [13], "title": "ELEMENT." });
 db.songs.insert({ "id": 48, "albumId": 13, "artistIds": [13], "title": "HUMBLE." });
 db.songs.insert({ "id": 49, "albumId": 13, "artistIds": [13], "title": "DUCKWORTH." });
-
+*/
 
 //COLLECTION: genres 
 db.genres.insert({ "id": 1, "name": "pop", "artistIds": [5, 8] });
